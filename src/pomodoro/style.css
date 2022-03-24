@@ -1,0 +1,47 @@
+body {
+  background-color: #1CAECE;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* @media (prefers-reduced-motion: no-preference) { */
+  .pomodoro {
+    max-width: 500px;
+    margin-top: -50px;
+  }
+
+  .spin {
+    animation: pomodoro-spin 15s linear;
+  }
+
+  .pause {
+    animation-play-state: paused;
+  }
+/* } */
+
+.cursor {
+  margin-top: -50px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #ffffff;
+}
+
+.clicked {
+  box-shadow: 0px 0px 0px transparent !important;
+  margin-top: 20px !important;
+  margin-left: 20px !important;
+  margin-bottom: 10px !important;
+}
+
+@keyframes pomodoro-spin {
+  from {
+    transform: rotate(135deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
